@@ -1,12 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { CafeListComponent } from './cafe/cafe-list/cafe-list.component';
+import { CafeModule } from './cafe/cafe.module';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [AppComponent],
+      imports: [RouterTestingModule, HttpClientModule, CafeModule],
+      declarations: [AppComponent, CafeListComponent],
     }).compileComponents();
   });
 
